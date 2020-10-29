@@ -19,21 +19,18 @@ public class Homework {
 	
 	/**
 	 * TODO: change bitmask1 and bitmask2 so that this prints true twice.
-	 * 
-	 * bitmask1 | value 1 should be even.
-	 * bitmask2 | value 2 should be odd.
 	 */
 	public static void usingOR() {
 		System.out.println("\nTesting | ...");
 		int bitmask1 = 0x00000000;
-		int value1   = 0xFFFFFFF1;
+		int value1   = 0x00000001;
 		
-		System.out.println((bitmask1 | value1) % 2 == 0);
+		System.out.println((bitmask1 | value1)  == 3);
 		
 		int bitmask2 = 0x00000000;
-		int value2   = 0x00FFFFF2;
+		int value2   = 0x00000100;
 		
-		System.out.println((bitmask2 | value2) % 2 == 1);
+		System.out.println((bitmask2 | value2) == 257);
 	}
 	
 	/**
@@ -65,7 +62,7 @@ public class Homework {
 		int shiftThisFar1 = 0; // how far should we shift the binary 1?
 		System.out.println((value1 >> shiftThisFar1) == 1);
 		
-		int value2 = 0xFF; // 00000000 00000000 00000000 11111111 how to make this number into 1?
+		int value2 = 0xFF; // 00000000 00000000 00000000 11111111 how to make this number into 1? 
 		int shiftThisFar2 = 0;
 		System.out.println((value2 >> shiftThisFar2) == 1);
 	}
